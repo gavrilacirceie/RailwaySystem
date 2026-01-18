@@ -1,0 +1,133 @@
+/* `railway-frontend/src/styles/lists.css` */
+
+:root {
+    --bg: #f7f8fa;
+    --card: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --primary: #2563eb;
+    --danger: #dc2626;
+}
+
+* { box-sizing: border-box; }
+
+.page {
+    padding: 20px;
+    background: var(--bg);
+    min-height: 100vh;
+    color: var(--text);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.page__title {
+    margin: 0 0 16px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+    align-items: end;
+}
+
+.field label {
+    display: block;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #fff;
+    outline: none;
+}
+
+.field input:focus,
+.field select:focus {
+    border-color: rgba(37, 99, 235, 0.4);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--text);
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn:hover { background: #f3f4f6; }
+
+.btn--primary {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+.btn--primary:hover { filter: brightness(0.95); }
+
+.btn--danger {
+    background: var(--danger);
+    border-color: var(--danger);
+    color: #fff;
+}
+
+.btn--danger:hover { filter: brightness(0.95); }
+
+.tableWrap {
+    overflow: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fff;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+}
+
+.table th,
+.table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.table th {
+    font-size: 12px;
+    color: var(--muted);
+    background: #fafafa;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.table tr:hover td { background: #fcfcfd; }
+
+.muted { color: var(--muted); }
